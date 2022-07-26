@@ -14,10 +14,10 @@
 }
 
 .header-webstudio {
-  font-family: "Raleway";
   @include font(700, 26px, 31px, 00.03em);
-  color: $main-second-color;
-  // margin-right: 90px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 50px;
 }
 
 .mob-menu {
@@ -113,7 +113,7 @@
   align-items: baseline;
   align-items: center;
   gap: 10px;
- 
+
 }
 .mob-social__item:nth-child(n + 2)::before {
   content: "";
@@ -132,5 +132,5 @@
   line-height: calc(22 / 14);
   letter-spacing: 0.02em;
   color: #2196f3;
-  
+
 }
