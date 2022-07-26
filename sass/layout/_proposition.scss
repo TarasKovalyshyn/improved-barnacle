@@ -1,0 +1,68 @@
+.proposition {
+  padding: 60px 0;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.proposition__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  // box-sizing: border-box;
+}
+// .proposition-item:not(:last-child) {
+//   margin-right: 30px;
+// }
+.proposition__item {
+  text-align: left;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+  // width: 270px;
+}
+.proposition__item::before {
+  display: block;
+  content: " ";
+  height: 120px;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.proposition__item:nth-child(1)::before {
+  background-image: url(../images/icons.svg/construction-machine.svg);
+  object-fit: cover;
+}
+.proposition__item:nth-child(2)::before {
+  background-image: url(../images/icons.svg/construction.svg);
+  object-fit: cover;
+}
+.proposition__item:nth-child(3)::before {
+  background-image: url(../images/icons.svg/excavator.svg);
+}
+.proposition__item:nth-child(4)::before {
+  background-image: url(../images/icons.svg/truck.svg);
+}
+
+.proposition__title {
+  @include font(700, 14px, 16px, 00.03em);
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-color;
+  margin-bottom: 10px;
+}
+
+.proposition__text {
+  @include font(400, 14px, 24px, 00.03em);
+  color: $portfolio-text-color;
+  box-sizing: border-box;
+}

@@ -1,0 +1,46 @@
+.doing {
+@media screen and (max-width: 1199px) {
+  display: none;
+}
+  @include desktop {
+  padding-bottom: 94px;
+} 
+  }
+  
+.doing__title {
+  @include font(700, 36px, 42px, 00.03em);
+  text-align: center;
+  margin-bottom: 50px;
+  color: $main-color;
+}
+
+.doing__list {
+    display: flex;
+    gap: 30px;}
+   
+// .doing__item:not(:last-child) {
+//   margin-right: 30px;
+// }
+.doing__item {
+  position: relative;
+  display: block;
+}
+
+.doing__thumb {
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include align-list;
+  justify-content: center;
+  padding: 27px 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+.thumb__text {
+  @include font(700, 14px, 16px, 00.03em);
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white-color;
+}

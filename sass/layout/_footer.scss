@@ -1,0 +1,170 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  // @media screen and (max-width: 767px) {
+  //   align-items: center;
+  //   text-align: center;
+  // }
+
+ @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  @include desktop{
+    text-align: left;
+
+  }
+  // @media screen and (min-width: 1200px) {
+  //   display: flex;
+  //   align-items: baseline;
+  //   justify-content: center;
+  // }
+}
+
+
+.footer-webstudio {
+  font-family: "Raleway";
+  @include font(700, 26px, 31px, 00.03em);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $main-second-color;
+}
+
+.footer-logo {
+  color: $white-color;
+}
+
+.footer__address {
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 9px;
+  }
+}
+.footer-link {
+  @include font(400, 14px, 24px, 00.03em);
+  color: $white-color;
+}
+
+.footer-mail,
+.footer-tel {
+  @include font(400, 14px, 24px, 00.03em);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+// .address:not(:last-child) {
+//   margin-bottom: 8px;
+// }
+.footer-soc {
+  @include tablet{
+    display: inline-block;
+  
+ 
+  }
+  // @include desktop {
+  //   margin-right: auto;
+  // }
+}
+.footer-soc-text {
+  font-family: inherit;
+  font-style: normal;
+  @include font(700, 14px, 16px, 00.03em);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer__link-color {
+  fill: $icons-color;
+  background: rgba(255, 255, 255, 0.1);
+  fill: rgba(255, 255, 255, 1);
+  &:hover,
+  &:focus {
+    background-color: $main-second-color;
+  }
+}
+
+.footer-form{
+  @include tablet {
+ margin-top: 30px ;
+}
+@include desktop{
+  margin-top: 0;
+}
+}
+.footer-form-text {
+  font-family: inherit;
+  @include font(700, 14px, 16px, 00.03em);
+  text-transform: uppercase;
+  color: $white-color;
+  margin-bottom: 20px;
+}
+
+
+.footer-imput {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  padding: 15px 0 15px 16px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background-color: #2f303a;
+  color: $white-color;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition-property: border;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+  &:focus {
+    border: 1px solid $main-second-color;
+    outline: none;
+  }
+  &::placeholder {
+    display: inline-block;
+    font-family: inherit;
+    @include font(400, 16px, 20px, 00.03em);
+    color: rgba(255, 255, 255, 0.6);
+  }
+ @include desktop {
+    width: 360px;
+  }
+}
+
+
+
+.footer-form-btn {
+  padding: 10px 29px 10px 28px;
+  margin-left: 12px;
+  display: inline-flex;
+  transition-property: background-color, color, box-shadow, fill;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:hover {
+    background-color: $button-tex-color;
+    color: $hover-focus_color;
+    fill: $hover-focus_color;
+  }
+}
+
+
+.footer-icon-form {
+  margin-left: 10px;
+}
